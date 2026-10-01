@@ -2,8 +2,9 @@
 
 Raw FFI bindings for NVIDIA TensorRT, via a pure-C shim over the TensorRT C++
 API (bindgen never sees C++ headers). Targets the TensorRT that ships with
-JetPack on Jetson Orin (10.3.x, aarch64). Part of the
-[`vision-rt`](https://github.com/kornia/vision-rt) workspace.
+JetPack on Jetson Orin (10.3.x, aarch64). Extracted from
+[`vision-rt`](https://github.com/kornia/vision-rt), whose `vrt` crate is the
+safe layer on top.
 
 - Compiles small C++ shims (`logger_shim`, `trt_bridge`, and `builder_shim`
   under the `builder` feature) with `cc`, then generates `btrt_*` bindings with
