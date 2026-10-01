@@ -1,4 +1,4 @@
-# trt-sys
+# tensorrt-rs
 
 Raw FFI bindings for NVIDIA TensorRT, via a pure-C shim over the TensorRT C++
 API (bindgen never sees C++ headers). Targets the TensorRT that ships with

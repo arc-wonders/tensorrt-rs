@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/trt-sys",
+    "crates/tensorrt-rs",
 ]
 
 [workspace.package]

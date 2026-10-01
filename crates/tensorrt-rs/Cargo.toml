@@ -1,5 +1,5 @@
 [package]
-name = "trt-sys"
+name = "tensorrt-rs"
 version.workspace = true
 edition.workspace = true
 repository.workspace = true
@@ -9,7 +9,7 @@ readme = "README.md"
 links = "nvinfer"
 
 [lib]
-name = "trt_sys"
+name = "tensorrt_rs"
 
 [lints.rust]
 unsafe_code = "allow"

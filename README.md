@@ -10,19 +10,19 @@ the TensorRT that ships with JetPack on Jetson Orin (10.3.x, aarch64).
 
 | Crate | Role |
 |-------|------|
-| [`crates/trt-sys`](crates/trt-sys) | Raw FFI: `btrt_*` C shim over TensorRT (logger, runtime, engine, execution context, pinned host memory) + optional ONNX → engine builder |
+| [`crates/tensorrt-rs`](crates/tensorrt-rs) | Raw FFI: `btrt_*` C shim over TensorRT (logger, runtime, engine, execution context, pinned host memory) + optional ONNX → engine builder |
 
-`trt-sys` was extracted from [`kornia/vision-rt`](https://github.com/kornia/vision-rt),
-whose `vrt` crate is the safe layer built on top of it.
+`tensorrt-rs` was extracted from [`kornia/vision-rt`](https://github.com/kornia/vision-rt)
+(where it was `crates/trt-sys`), whose `vrt` crate is the safe layer built on top of it.
 
 ## Usage
 
 ```toml
 [dependencies]
-trt-sys = { git = "https://github.com/kornia/tensorrt-rs", branch = "main" }
+tensorrt-rs = { git = "https://github.com/kornia/tensorrt-rs", branch = "main" }
 ```
 
-`trt-sys` declares `links = "nvinfer"`, so a dependency graph can hold only one
+`tensorrt-rs` declares `links = "nvinfer"`, so a dependency graph can hold only one
 copy of it. Cargo keys a git source on the exact spec string — every crate in
 the graph must name this repo the same way.
 

@@ -10,7 +10,7 @@
 //!
 //! bindgen generates Rust FFI from `trt_bridge.h`. When TRT updates:
 //! 1. `apt install` new TRT headers
-//! 2. `cargo build -p trt-sys` — C++ compiler errors in trt_bridge.cpp point exactly to
+//! 2. `cargo build -p tensorrt-rs` — C++ compiler errors in trt_bridge.cpp point exactly to
 //!    changed methods (enqueueV2→V3, Dims→Dims64, etc.)
 //! 3. Fix those methods; bindgen regenerates the Rust side automatically
 //! See UPDATING.md for the full checklist.
